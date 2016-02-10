@@ -1,0 +1,7 @@
+.DS_Store
+.idea/**
+.tscache/
+node_modules/
+app/lib/**
+app/ts/**/*.map
+app/ts/**/*.js

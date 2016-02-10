@@ -1,0 +1,43 @@
+{
+  "name": "ng1ToNg2",
+  "version": "1.0.0",
+  "description": "How to migrate from an angular 1 application to an angular 2 application",
+  "author": "Cyril Balit <cbalit@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cbalit/Ng1ToNg2"
+  },
+  "bugs": {
+    "url": "https://github.com/cbalit/Ng1ToNg2/issues"
+  },
+  "scripts": {
+    "start": "grunt serve"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.3",
+    "systemjs": "0.19.6",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "zone.js": "0.5.11",
+    "express": "^4.8.2",
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "~0.5.0",
+    "grunt-bower-install": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-express": "^1.4.1",
+    "load-grunt-tasks": "~0.2.0",
+    "lodash": "^3.10.1",
+    "method-override": "^2.1.2",
+    "time-grunt": "~0.2.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.14.2",
+    "grunt-ts": "^5.2.0",
+    "typescript": "^1.7.3 "
+  }
+}
