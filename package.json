@@ -16,13 +16,13 @@
     "start": "grunt serve"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.3",
+    "angular2": "2.0.0-beta.6",
     "systemjs": "0.19.6",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.0",
-    "zone.js": "0.5.11",
+    "zone.js": "0.5.14",
     "express": "^4.8.2",
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.5.0",
