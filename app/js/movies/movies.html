@@ -1,29 +1,28 @@
 <!-- header-->
 <header class="page-header">
-    <h1>Ma vidéothèque <small>{{movies.length}} films</small>
-        <button class="btn btn-primary" bs-modal="'partials/movie-form-modal.html'" ng-controller="movieFormController">Ajouter un film</button>
+    <h1>Ma vidéothèque <small>{{MoviesCtrl.movies.length}} films</small>
     </h1>
 </header>
 
 <!-- barre d'actions -->
 <section class="well form-inline">
-    <input class="span5" type="text" ng-model="search" placeholder="Rechercher">
+    <input class="span5" type="text" ng-model="MoviesCtrl.search" placeholder="Rechercher">
     <section class="pull-right">
-        <button class="btn btn-success" ng-click="toogleView()"><i ng-class="tableViewIcon"></i></button>
-        <button class="btn btn-info" ng-click="tri = 'releaseYear'; reverse = !reverse">Trier par année</button>
-        <button class="btn btn-info" ng-click="tri = 'title'; reverse = !reverse">Trier par titre</button>
+        <button class="btn btn-success" ng-click="MoviesCtrl.toogleView()"><i ng-class="MoviesCtrl.tableViewIcon"></i></button>
+        <button class="btn btn-info" ng-click="MoviesCtrl.tri = 'releaseYear'; MoviesCtrl.reverse = !MoviesCtrl.reverse">Trier par année</button>
+        <button class="btn btn-info" ng-click="MoviesCtrl.tri = 'title'; MoviesCtrl.reverse = !MoviesCtrl.reverse">Trier par titre</button>
     </section>
 </section>
 
 
 <!-- liste des films -->
-<div ng-switch on="tableView" >
+<div ng-switch on="MoviesCtrl.tableView" >
 <ul class="thumbnails" ng-switch-when="false">
-    <li ng-repeat="movie in movies | orderBy:tri:reverse | filter : search " class="span12">
+    <li ng-repeat="movie in MoviesCtrl.movies | orderBy:MoviesCtrl.tri:MoviesCtrl.reverse | filter : MoviesCtrl.search " class="span12">
         <img ng-src="{{movie.poster | poster}}" class="span2">
         <div class="caption">
             <h3>{{movie.title | uppercase}}
-                <button class="btn btn-danger" ng-click="deleteMovie($index)"><i class="icon-trash icon-white"></i></button>
+                <button class="btn btn-danger" ng-click="MoviesCtrl.deleteMovie($index)"><i class="icon-trash icon-white"></i></button>
                 <a class="btn btn-info" href="#/movies/edit/{{movie.id}}"><i class="icon-edit icon-white"></i></a>
             </h3>
             <p><b>Année de sortie : </b>{{movie.releaseYear}}</p>
@@ -45,7 +44,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="movie in movies | orderBy:tri:reverse | filter : search ">
+    <tr ng-repeat="movie in MoviesCtrl.movies | orderBy:MoviesCtrl.tri:MoviesCtrl.reverse | filter : MoviesCtrl.search ">
         <td>{{$index + 1}}</td>
         <td>{{movie.title | uppercase}}</td>
         <td>{{movie.directors}}</td>

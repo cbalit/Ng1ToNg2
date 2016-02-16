@@ -1,3 +1,15 @@
-/**
- * Created by cyrilbalit on 13/02/2016.
- */
+(function() {
+    'use strict';
+
+    angular
+        .module('movieapp-home')
+        .controller('HomeController', HomeController);
+
+    HomeController.$inject = [];
+
+    function HomeController() {
+        var vm = this;
+
+        vm.user = 'Thierry LAU';
+    }
+})();

@@ -1,3 +1,17 @@
-/**
- * Created by cyrilbalit on 13/02/2016.
- */
+(function() {
+    'use strict';
+
+    angular
+        .module('movieapp-core')
+        .filter('poster', PosterFilter);
+
+    function PosterFilter() {
+        return function(posterUrl) {
+            if(!posterUrl){
+                return "img/no-poster.jpg";
+            } else {
+                return posterUrl;
+            }
+        };
+    }
+})();

@@ -1,37 +1,36 @@
 <header class="page-header">
-    <h1>Modification</small>
-    </h1>
+    <h1>Modification</h1>
 </header>
 
 <section>
     <form class="form-horizontal">
         <div class="control-group">
             <label class="control-label">Titre :</label>
-            <input type="text" ng-model="movie.title">
+            <input type="text" ng-model="EditCtrl.movie.title">
         </div>
         <div class="control-group">
             <label class="control-label">Année de sortie :</label>
-            <input type="text" ng-model="movie.releaseYear">
+            <input type="text" ng-model="EditCtrl.movie.releaseYear">
         </div>
         <div class="control-group">
             <label class="control-label">Réalisateur : </label>
-            <input type="text" ng-model="movie.directors">
+            <input type="text" ng-model="EditCtrl.movie.directors">
         </div>
         <div class="control-group">
             <label class="control-label">Acteurs :</label>
-            <input type="text" ng-model="movie.actors">
+            <input type="text" ng-model="EditCtrl.movie.actors">
         </div>
         <div class="control-group">
             <label class="control-label">Synopsis :</label>
-            <textarea ng-model="movie.synopsis"></textarea>
+            <textarea ng-model="EditCtrl.movie.synopsis"></textarea>
         </div>
         <div class="control-group">
             <label class="control-label">Note :</label>
-            <input type="number" placeholder="entre 1 et 5" ng-model="movie.rate">
+            <input type="number" placeholder="entre 1 et 5" ng-model="EditCtrl.movie.rate">
         </div>
-        <footer class="form-actions">
+        <footer>
             <a href="#/movies" class="btn btn-danger btn-small">Annuler</a>
-            <button class="btn btn-success" ng-click="updateMovie(movie)">Ajouter</button>
+            <button class="btn btn-success" ng-click="EditCtrl.updateMovie(EditCtrl.movie)">Ajouter</button>
         </footer>
     </form>
 </section>

@@ -1,22 +1,37 @@
-"use strict";
+(function () {
+    'use strict';
 
-var angularMovieApp = angular.module('angularMovieApp', ['$strap.directives']);
+    angular
+        .module('movieapp', [
+            'movieapp-core',
+            'movieapp-home',
+            'movieapp-movies',
+            'movieapp-editMovie',
+            'ngRoute'
+        ])
+        .config(config);
 
-angularMovieApp.config(function($routeProvider) {
-    $routeProvider
-        .when('/home', {
-            templateUrl: 'partials/home.html',
-            controller : 'homeController'
-        })
-        .when('/movies', {
-            templateUrl: 'partials/movies.html',
-            controller : 'moviesController'
-        })
-        .when('/movies/edit/:id', {
-            templateUrl: 'partials/edit.html',
-            controller: 'editMovieController'
-        })
-        .otherwise({
-            redirectTo: '/home'
-        });
-});
+    config.$inject = ['$routeProvider'];
+
+    function config($routeProvider) {
+        $routeProvider
+            .when('/home', {
+                templateUrl: 'js/home/home.html',
+                controller: 'HomeController',
+                controllerAs : 'HomeCtrl'
+            })
+            .when('/movies', {
+                templateUrl: 'js/movies/movies.html',
+                controller: 'MoviesController',
+                controllerAs : 'MoviesCtrl'
+            })
+            .when('/movies/edit/:id', {
+                templateUrl: 'js/editMovie/edit.html',
+                controller: 'EditMovieController',
+                controllerAs : 'EditCtrl'
+            })
+            .otherwise({
+                redirectTo: '/home'
+            });
+    }
+})();

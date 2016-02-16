@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('movieapp-editMovie', []);
+        .module('movieapp-movies', []);
 })();
