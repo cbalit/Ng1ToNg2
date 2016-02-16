@@ -34,15 +34,11 @@ All the code is in js files.
 * Use a module loader
 * Use ES6 syntax for import and export
 * Use TypeScript files
-
-
-### Step 3 - Use TypeScript feature
-
 * Use the class syntax for your controller and service
-* Start to use type in your code
 
 
-### Step 4 - My first upgrade
+
+### Step 3 - My first upgrade
 Angular 2 scripts are loaded in your page
 * replace $http by Angular 2 Http service
 * use upgradeAdapter to load HTTP-PROVIDER
@@ -50,25 +46,26 @@ Angular 2 scripts are loaded in your page
 
 
 
-### Step 6 - And my controller become a component
+### Step 4 - And my controller become a component
 * use the new Angular 2 template syntax
 * create the a component to replace list controller
 * UpgradeAdapter.downgradeNg2Component will allow to use this component as directive in Angular1 world
 * limit the route definition to a single template property using this directive
 
-### Step 7 - Filter To pipe
+
+### Step 5 - Filter To pipe
 2 pipes have been add to act as filter and orderBy filters
 * create a Angular 2 pipe to replace the star filter
 
 
-### Step 8 - A new component with form validation
+### Step 6 - A new component with form validation
 
-* Same as step-6 use a new component for Edition (component, template and route)
+* Same as step-4 use a new component for Edition (component, template and route)
 * inject $location and $routeParams with upgradeAdapter.upgradeNg1Provider
 * add form validation data in your html template
 
 
-### Step 9 - Add angular 2 router
+### Step 7 - Add angular 2 router
 
 * import router directives and providers
 * create an app component with your routes configuration
